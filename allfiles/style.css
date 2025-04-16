@@ -116,15 +116,87 @@ html{
 
 /* https://wallpapercave.com/wp/wp10448407.jpg */
 /* wallpaper*/
-.home{
+/* Home Section */
+.home {
     display: flex;
-    background: url("images/supper.jpg") no-repeat bottom;
+    background: url("images/supper.jpg") no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
     color: #fff;
     min-height: 500px;
     font-family: 'Ubuntu', sans-serif;
+    position: relative; /* Voor overlay of content-positionering */
+}
+
+.home .max-width {
+    margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1 {
+    font-size: 27px;
+}
+
+.home .home-content .text-2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .home-content .text-3 {
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.home .home-content .text-3 span {
+    color: #fb0000;
+    font-weight: 500;
+}
+
+.home .home-content a {
+    display: inline-block;
+    background-color: #00d4fb;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #00d4fb;
+    transition: all 0.3s ease;
+}
+
+.home .home-content a:hover {
+    color: #00d4fb;
+    background: none;
+}
+
+/* Mobile Adjustments for Home Section */
+@media (max-width: 947px) {
+    .home {
+        background: url("images/supper-mobile.jpg") no-repeat center;
+        background-size: contain; /* Zorgt dat de hele afbeelding zichtbaar is zonder overmatige zoom */
+        background-attachment: scroll; /* Voorkomt problemen met fixed op mobiel */
+        background-position: center top; /* Start bovenaan om de afbeelding volledig te tonen */
+        height: auto;
+        min-height: 700px; /* Verhoogd om ruimte te geven voor de afbeelding */
+        padding-bottom: 20px; /* Extra ruimte voor content */
+    }
+    .home .max-width {
+        margin: 20px;
+    }
+    .home .home-content .text-1 {
+        font-size: 20px;
+    }
+    .home .home-content .text-2 {
+        font-size: 50px;
+    }
+    .home .home-content .text-3 {
+        font-size: 30px;
+    }
+    .home .home-content a {
+        font-size: 20px;
+        padding: 10px 20px;
+    }
 }
 
 
